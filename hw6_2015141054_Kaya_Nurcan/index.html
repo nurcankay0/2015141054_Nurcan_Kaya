@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        margin: 40px;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-gap: 10px 10px;
+        background-color: #fff;
+        color: #444;
+    }
+
+    .box {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+    }
+</style>
+<body>
+<div class="wrapper">
+
+
+           <p><input type="text" name="res" id="res" value="" class="calc-display-input" onfocus="this.blur()"></p><br>
+
+
+   <p>
+    <div class="box a"> <button type="button" class="calc-button calc-button-gray" onclick="s('Just....')">mrc</button></div>
+    <div class="box b"> <button type="button" class="calc-button calc-button-gray" onclick="s('....do..')">m-</button></div>
+    <div class="box c">  <button type="button" class="calc-button calc-button-gray" onclick="s('......it')">m+</button></div>
+    <div class="box d">  <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('/')">÷</button></div>
+
+    </p>
+    <div class="box a"> <button type="button" class="calc-button" onclick="a('7')">7</button></div>
+    <div class="box b"> <button type="button" class="calc-button" onclick="a('8')">8</button></div>
+    <div class="box c">   <button type="button" class="calc-button" onclick="a('9')">9</button></div>
+    <div class="box d">   <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('*')">x</button></div>
+
+
+    <div class="box a"> <button type="button" class="calc-button" onclick="a('4')">4</button></div>
+    <div class="box b"> <button type="button" class="calc-button" onclick="a('5')">5</button></div>
+    <div class="box c"> <button type="button" class="calc-button" onclick="a('6')">6</button></div>
+    <div class="box d">  <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('-')">-</button></div>
+
+
+    <div class="box a"> <button type="button" class="calc-button" onclick="a('1')">1</button></div>
+    <div class="box a">    <button type="button" class="calc-button" onclick="a('2')">2</button></div>
+    <div class="box a">   <button type="button" class="calc-button" onclick="a('3')">3</button></div>
+    <div class="box a">  <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('+')">+</button></div>
+
+
+    <div class="box a">  <button type="button" class="calc-button" onclick="a('0')">0</button></div>
+    <div class="box a">   <button type="button" class="calc-button" onclick="a('.')">.</button></div>
+    <div class="box a">  <button type="button" class="calc-button" onclick="s('')">C</button></div>
+    <div class="box a"> <button type="button" class="calc-button calc-button-yellow calc-button-big" onclick="e()">=</button></div>
+
+
+
+</div>
+<script>
+    function s(v) { document.getElementById('res').value = v }
+    function a(v) { document.getElementById('res').value += v }
+    function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
+</script>
+
+</body>
+</html>
